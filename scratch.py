@@ -1,3 +1,4 @@
+#points scored in each game as variables
 game_1 = 3
 game_2 = 6
 game_3 = 10
@@ -9,7 +10,8 @@ Game 1: {}
 Game 2: {}
 Game 3: {}
 Game 4: {}
-Game 5: {}""".format(game_1, game_2, game_3, game_4, game_5))
+Game 5: {}
+""".format(game_1, game_2, game_3, game_4, game_5))
 
 total_points = game_1 + game_2 + game_3 + game_4 + game_5
 
