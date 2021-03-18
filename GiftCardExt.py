@@ -4,10 +4,11 @@ games = 35
 anime_R34_Skinpack = 3
 anime_girl_voicepack = 4
 real_anime_texturepack = 6
+top_up = 0
 
 print("The balance of the card is ${}".format(gift_card))
 
-print("Games are &{}\nThe anime skin pack is ${}\nThe anime girl voice pack is  ${}\nThe realistic anime texturepack is ${}".format(games, anime_R34_Skinpack, anime_girl_voicepack, real_anime_texturepack))
+print("Games are ${}\nThe anime skin pack is ${}\nThe anime girl voice pack is  ${}\nThe realistic anime texturepack is ${}".format(games, anime_R34_Skinpack, anime_girl_voicepack, real_anime_texturepack))
 
 total_cost = anime_girl_voicepack + games + anime_R34_Skinpack + real_anime_texturepack
 while gift_card < total_cost:
@@ -16,8 +17,11 @@ while gift_card < total_cost:
     if retard == "no":
         retard = input("Are you sure?")
     elif retard == "yes":
-        top_up = input("how much would you like to top up by?")
+        top_up = int(input("how much would you like to top up by? "))
+        if gift_card + top_up >= total_cost:
+            break
+gift_card += top_up
 gift_card = gift_card - total_cost
 
 
-print("After buying the game and 3 micro transactions, the gift card balance is now ${}".format(gift_card - total_cost))
+print("After buying the game and 3 micro transactions, the gift card balance is now ${}".format(gift_card))
